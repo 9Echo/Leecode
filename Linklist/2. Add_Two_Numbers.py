@@ -21,3 +21,8 @@ class Solution:
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
         return dummy.next
+
+    
+"""
+dummy是虚拟节点，位于头结点之前，所以dummy.next指向头结点，返回的是整个链表的头结点信息即整个链表信息
+"""
