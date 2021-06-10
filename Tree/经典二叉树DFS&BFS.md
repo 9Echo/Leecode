@@ -164,6 +164,29 @@ class Solution:
                 if node.right:
                     tmp.append(node.right)
            res.append(tmp)
-        r
+        return res
+```
+
+还有一个很有意思的dfs递归写法
+
+```python
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        if not root:
+            return []
+        
+        res = []
+        # index 表示当前层数
+        def dfs(index, node):
+            # res=[[1], [2, 3]]时，index为3，需要插入一个空list
+            if len(res) < index:
+                res.append([])
+            res[index-1].append(node.val)
+            if node.left:
+                dfs(index+1, node.left)
+            if node.right:
+                dfs(index+1, node.right)
+        dfs(1, root)
+        return res
 ```
 
