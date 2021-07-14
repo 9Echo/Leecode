@@ -16,3 +16,15 @@ return False
 return not string
 ```
 
+#### 判断是否为数字or字母
+
+```python
+str1 = '123'
+str2 = 'abc'
+str3 = '123abc'
+error = 'a 1 !'
+print(str1.isdigit(), str2.isdigit())    # True False
+print(str2.isalpha(), str3.isalpha())    # True False
+print(str3.isalnum(), error.isalnum())   # True False
+```
+
