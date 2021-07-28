@@ -195,3 +195,13 @@ print(sorted(dic.items(), key=lambda x:x[1]))
 >>> [('s', 1), ('a', 2), ('c', 3)]
 ```
 
+#### random
+
+```python
+import random
+a = random.randint(x, y)
+>>> a = x,...,y(可以取到左右端点)
+```
+
+
+
